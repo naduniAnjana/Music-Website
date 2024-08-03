@@ -1,0 +1,135 @@
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(207, 207, 207);
+}
+
+.top-chart {
+    width: 500px;
+    height: 225px;
+    padding: 25px 30px;
+    overflow: hidden;
+    position: absolute; /* Changed */
+    top: 490px; /* Added */
+    left: 420px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.342);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.top-chart .header1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.top-chart .header1 h5 {
+    margin: 0; 
+    flex: 1; 
+    text-align: left; 
+}
+
+.top-chart .header1 .see {
+    font-size: 10px;
+    color: #979797; 
+    text-decoration: none;
+}
+
+.top-chart .header1 .see:hover {
+    color: #ffffff; 
+}
+
+.top-chart .items .item .info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.top-chart .items {
+    margin-top: 7px;
+    color: #fff;
+    font-size: 12px;
+
+    flex: 1; /* Allows the items section to take remaining space */
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.top-chart .items::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+.top-chart .items .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.top-chart .items .item:last-child {
+    margin-bottom: 0;
+}
+
+.top-chart .items .item .info,
+.top-chart .items .item .actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-chart .items .item .info p {
+    color: #919191;
+    font-size: 11px;
+}
+
+.top-chart .items .item .info h5 {
+    font-size: 12px;
+}
+
+.top-chart .items .item .actions {
+    font-size: 12px;
+}
+
+.top-chart .items .item .actions .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #32323d;
+    padding: 6px;
+    border: 2px solid #464748;
+    border-radius: 6px;
+}
+
+.top-chart .items .item .actions .icon i {
+    cursor: pointer;
+    font-size: 10px;
+    color: #0e9fff;
+}
+
+.top-chart .items .item .actions i {
+    color: #919191;
+    font-size: 15px;
+    cursor: pointer;
+}

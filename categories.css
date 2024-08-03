@@ -1,0 +1,122 @@
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(207, 207, 207);
+}
+
+.categories {
+    width: 381px;
+    height: 225px;
+    padding: 25px 30px;
+    overflow: hidden;
+    position: absolute;
+    top: 490px; 
+    left: 25px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.342);
+}
+
+.categories .genres {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 19px;
+    margin-bottom: 10px; 
+}
+
+.categories .genres h5 {
+    margin: 0; 
+    flex: 1; 
+    text-align: left; 
+}
+
+.categories .see {
+    font-size: 10px;
+    color: #979797; 
+    text-decoration: none;
+}
+
+.categories .see:hover {
+    color: #ffffff; 
+}
+
+.categories .items {
+    display: flex;
+    justify-content: space-between; 
+    flex-direction: column;
+}
+
+.categories .row1, .categories .row2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; 
+}
+
+.categories .item {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    color: #000;
+    font-size: 12px; 
+}
+
+.categories .row1 .item:nth-child(1) {
+    background-color: #ff9999;
+}
+
+.categories .row1 .item:nth-child(2) {
+    background-color: #99ccff; 
+}
+
+.categories .row1 .item:nth-child(3) {
+    background-color: #99ff99; 
+}
+
+.categories .row2 .item:nth-child(1) {
+    background-color: #ffcc99; 
+}
+
+.categories .row2 .item:nth-child(2) {
+    background-color: #cc99ff; 
+}
+
+.categories .row2 .item:nth-child(3) {
+    background-color: #ffff99; 
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce {
+    animation: bounce 0.5s ease-in-out;
+    animation-fill-mode: both;
+}

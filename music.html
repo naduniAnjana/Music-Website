@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="music.css">
+        <link rel="stylesheet" href="music-list.css">
+        <link rel="stylesheet" href="artist.css">
+        <link rel="stylesheet" href="chart.css">
+        <link rel="stylesheet" href="categories.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <title>Music Website</title>
+    </head>
+    <body>
+        <nav class="sidebar close">
+           <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="./images/logo.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Groveey Music</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+           </header> 
+
+           <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link active">
+                        <a href="#">
+                            <i class='bx bx-plus-circle icon'></i>
+                            <span class="text nav-text" id="acti">Explore</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-album icon'></i>
+                            <span class="text nav-text">Albums</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-microphone icon'></i>
+                            <span class="text nav-text">Artists</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-radio icon'></i>
+                            <span class="text nav-text">Radio</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-reset icon'></i>
+                            <span class="text nav-text">Recent</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-heart icon'></i>
+                            <span class="text nav-text">Favorites</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-cog icon'></i>
+                        <span class="text nav-text">Settings</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Log Out</span>
+                    </a>
+                </li>
+            </div>
+           </div>
+        </nav>
+
+        <section class="home">
+            <div class="notify">
+                <div class="search-box">
+                    <i class='bx bx-search icons'></i>
+                    <input type="text" placeholder="search...">
+                </div>
+                <button class="notification-bell"><i class='bx bxs-bell'></i></button>
+                <div class="user">
+                    <img src="./images/user.jpg" alt="user" title="Nanduni">
+                </div>
+            </div>
+
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="#" class="active">MUSIC</a></li>
+                    <li><a href="#">PODCAST</a></li>
+                    <li><a href="#">LIVE</a></li>
+                </ul>
+            </div>
+
+            <div class="contents">
+                <h1>In My Feelings</h1>
+                <div class="info">
+                    <h4>Camila Cabello</h4>     
+                    <h5>63 Million Plays</h5>
+                </div>
+                <div class="buttons">
+                    <button class="btn1">Listen Now</button>
+                    <button class="btn2"><i class='bx bxs-heart'></i></button>
+                </div>
+            </div>
+
+            <div class="container-wrapper">
+                <div class="container">
+                    <div class="top-bar">
+                        <i class='bx bx-heart'></i>
+                        <span>Now Playing</span>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                
+                    <div class="img-area">
+                        <img src="" alt="">
+                    </div>
+                
+                    <div class="song-details">
+                        <p class="name"></p>
+                        <p class="artist"></p>
+                    </div>
+                
+                    <div class="progress-area">
+                        <div class="progress-bar">
+                            <audio src="" id="main-audio"></audio>
+                        </div>
+                        <div class="song-timer">
+                            <span class="current-time">0:00</span>
+                            <span class="max-duration">0:00</span>
+                        </div>
+                        <audio id="main-audio" src=""></audio>
+                    </div>
+                
+                    <div class="controls">
+                        <i id="repeat-plist" class="material-icons" title="song looped">repeat_one</i>
+                        <!-- <i id="repeat" class="material-icons" title="Playlist looped">repeat</i> -->
+                        <i id="prev" class="material-icons prev">fast_rewind</i>
+                
+                        <div class="play-pause">
+                            <i class="material-icons play">play_arrow</i>
+                        </div>
+                
+                        <i id="next" class="material-icons next">fast_forward</i>
+                        <i id="more-music" class="material-icons">queue_music</i>
+                    </div>
+                
+                    <div class="music-list">
+                        <div class="header">
+                            <div class="row">
+                                <i class="material-icons">queue_music</i>
+                                <span>Music List</span>
+                            </div>
+                            <i id="close" class="material-icons">close</i>
+                        </div>
+                        <ul>
+                
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top-artist">
+                <div class="head">
+                    <h4>Top Artists</h4>
+                    <div class="btn-s">
+                        <i id="left-scroll" class='bx bx-left-arrow-alt' ></i>
+                        <i id="right-scroll" class='bx bx-right-arrow-alt' ></i>
+                    </div>
+                </div>
+
+                <div class="art">
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist1.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Taylor Swift</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist2.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Ariana Grande</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist3.jpeg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Selena Gomez</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist4.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Beyonce</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist5.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Dua Lipa</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist6.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">A R Rahman</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist7.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Shakira</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist8.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Drake</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist9.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Ed Sheeran</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist10.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Justin Bieber</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist11.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Billie Eillish</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist12.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Miley Cyrus</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist13.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Katy Perry</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist14.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Britney Spears</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist15.jpeg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Charlie Puth</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <img src="./images/artist16.jpg" alt="img1">
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Shreya Goshal</p>
+                    </li>
+                </div>
+            </div>
+
+            <div class="top-chart">
+                <div class="header1">
+                    <h5>Top Charts</h5>
+                    <!-- <a href="#" class="see">See all</a> -->
+                </div>
+
+                <div class="items">
+                    <div class="item" id="song1">
+                        <div class="info">
+                            <p>01</p>
+                            <img src="./images/music1.jpg" alt="">
+                            <div class="details">
+                                <h5>Aasa Kooda</h5>
+                                <p>Sai Abhyankkar</p>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <p>03.48</p>
+                            <div class="icon">
+                                <i id="startPlayback" class="material-icons">play_arrow</i>
+
+                                <!-- <i class='bx bxs-right-arrow'></i> -->
+                            </div>
+                            <i class='bx bxs-plus-square' ></i>
+                        </div>
+                    </div>
+
+                    <div class="item" id="song2">
+                        <div class="info">
+                            <p>02</p>
+                            <img src="./images/music2.jpg" alt="">
+                            <div class="details">
+                                <h5>Akhiyaan Gulaab</h5>
+                                <p>Mitraz</p>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <p>02.35</p>
+                            <div class="icon">
+                                <i id="startPlayback" class="material-icons">play_arrow</i>
+
+                                <!-- <i class='bx bxs-right-arrow'></i> -->
+                            </div>
+                            <i class='bx bxs-plus-square' ></i>
+                        </div>
+                    </div>
+
+                    <div class="item" id="song3">
+                        <div class="info">
+                            <p>03</p>
+                            <img src="./images/music3.jpg" alt="">
+                            <div class="details">
+                                <h5>Water</h5>
+                                <p>Tyla</p>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <p>03.39</p>
+                            <div class="icon">
+                                <i id="startPlayback" class="material-icons">play_arrow</i>
+
+                                <!-- <i class='bx bxs-right-arrow'></i> -->
+                            </div>
+                            <i class='bx bxs-plus-square' ></i>
+                        </div>
+                    </div>
+
+                    <div class="item" id="song4">
+                        <div class="info">
+                            <p>04</p>
+                            <img src="./images/music4.jpg" alt="">
+                            <div class="details">
+                                <h5>Soni Soni</h5>
+                                <p>Darshan Raval, Jonita Gandhi</p>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <p>03.13</p>
+                            <div class="icon">
+                                <i id="startPlayback" class="material-icons">play_arrow</i>
+
+                                <!-- <i class='bx bxs-right-arrow'></i> -->
+                            </div>
+                            <i class='bx bxs-plus-square' ></i>
+                        </div>
+                    </div>
+
+                    <div class="item" id="song5">
+                        <div class="info">
+                            <p>05</p>
+                            <img src="./images/music5.jpg" alt="">
+                            <div class="details">
+                                <h5>Flowers</h5>
+                                <p>Miley Cyrus</p>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <p>03.21</p>
+                            <div class="icon">
+                                <i id="startPlayback" class="material-icons">play_arrow</i>
+                                <!-- <i class='bx bxs-right-arrow'></i> -->
+                            </div>
+                            <i class='bx bxs-plus-square' ></i>
+                        </div>
+                    </div>
+
+                    <div class="item" id="song6">
+                        <div class="info">
+                            <p>06</p>
+                            <img src="./images/music6.jpg" alt="">
+                            <div class="details">
+                                <h5>Nadaaniyan</h5>
+                                <p>Akshath</p>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <p>02.49</p>
+                            <div class="icon">
+                                <i id="startPlayback" class="material-icons">play_arrow</i>
+                                <!-- <i class='bx bxs-right-arrow'></i> -->
+                            </div>
+                            <i class='bx bxs-plus-square' ></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categories">
+                <div class="genres">
+                    <div class="header1"></div>
+                    <h5>Genres</h5>
+                    <a href="#" class="see">See all</a>
+                </div>
+
+                <div class="items">
+                    <div class="row1">
+                        <div class="item">
+                            <p>Dance <br> Beat</p>
+                        </div>
+                        <div class="item">
+                            <p>Hip <br>Hop</p>
+                        </div>
+                        <div class="item">
+                            <p>Alternative <br>Indie</p>
+                        </div>
+                    </div>
+
+                    <div class="row2">
+                        <div class="item">
+                            <p>Hip Hop <br> Rap</p>
+                        </div>
+                        <div class="item">
+                            <p>Classical <br>Period</p>
+                        </div>
+                        <div class="item">
+                            <p>ClubHouse <br> Remix</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <script src="music.js"></script>
+        <script src="music-list.js"></script>
+        <script src="script.js"></script>
+        <script src="artist.js"></script>
+
+        <script src="categories.js"></script>
+        <script src="chart.js"></script>
+    </body>
+</html>
