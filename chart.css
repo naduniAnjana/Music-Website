@@ -25,8 +25,8 @@ body {
     padding: 25px 30px;
     overflow: hidden;
     position: absolute; /* Changed */
-    top: 490px; /* Added */
-    left: 420px;
+    top: 503px; /* Added */
+    left: 445px;
     background: #1a1a1a;
     border-radius: 15px;
     box-shadow: 0px 6px 15px rgba(0,0,0,0.342);
@@ -132,4 +132,16 @@ body {
     color: #919191;
     font-size: 15px;
     cursor: pointer;
+}
+
+.top-chart .items .item .actions span {
+    color: #919191;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.top-chart .items .item .actions .icon span {
+    cursor: pointer;
+    font-size: 10px;
+    color: #0e9fff;
 }

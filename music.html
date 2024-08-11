@@ -107,6 +107,17 @@
                 <div class="search-box">
                     <i class='bx bx-search icons'></i>
                     <input type="text" placeholder="search...">
+                    <div class="search_results">
+                        <!-- <a href="" class="card">
+                            <img src="images/1.jpg" alt="">
+                            <div class="content">
+                                Aasa Kooda
+                                <div class="subtitle">
+                                    Sai Abhyankkar
+                                </div>
+                            </div>
+                        </a> -->
+                    </div>
                 </div>
                 <button class="notification-bell"><i class='bx bxs-bell'></i></button>
                 <div class="user">
@@ -142,11 +153,11 @@
                         <i class='bx bx-plus'></i>
                     </div>
                 
-                    <div class="img-area">
+                    <div class="img-area" id="poster_master_play">
                         <img src="" alt="">
                     </div>
                 
-                    <div class="song-details">
+                    <div class="song-details" id="title">
                         <p class="name"></p>
                         <p class="artist"></p>
                     </div>
@@ -322,10 +333,10 @@
                 </div>
 
                 <div class="items">
-                    <div class="item" id="song1">
+                    <div class="item" data-song-id="1">
                         <div class="info">
                             <p>01</p>
-                            <img src="./images/music1.jpg" alt="">
+                            <img src="./images/music1.jpg" alt="song image">
                             <div class="details">
                                 <h5>Aasa Kooda</h5>
                                 <p>Sai Abhyankkar</p>
@@ -334,7 +345,8 @@
                         <div class="actions">
                             <p>03.48</p>
                             <div class="icon">
-                                <i id="startPlayback" class="material-icons">play_arrow</i>
+                                <!-- <span id="play_music1" class="material-icons">play_arrow</span> -->
+                                <i id="1" class="material-icons">play_arrow</i>
 
                                 <!-- <i class='bx bxs-right-arrow'></i> -->
                             </div>
@@ -342,10 +354,10 @@
                         </div>
                     </div>
 
-                    <div class="item" id="song2">
+                    <div class="item" data-song-id="2">
                         <div class="info">
                             <p>02</p>
-                            <img src="./images/music2.jpg" alt="">
+                            <img src="./images/music2.jpg" alt="song image">
                             <div class="details">
                                 <h5>Akhiyaan Gulaab</h5>
                                 <p>Mitraz</p>
@@ -354,7 +366,8 @@
                         <div class="actions">
                             <p>02.35</p>
                             <div class="icon">
-                                <i id="startPlayback" class="material-icons">play_arrow</i>
+                                <!-- <span id="play_music2" class="material-icons">play_arrow</span> -->
+                                <i id="2" class="material-icons">play_arrow</i>
 
                                 <!-- <i class='bx bxs-right-arrow'></i> -->
                             </div>
@@ -362,10 +375,10 @@
                         </div>
                     </div>
 
-                    <div class="item" id="song3">
+                    <div class="item" data-song-id="3">
                         <div class="info">
                             <p>03</p>
-                            <img src="./images/music3.jpg" alt="">
+                            <img src="./images/music3.jpg" alt="song image">
                             <div class="details">
                                 <h5>Water</h5>
                                 <p>Tyla</p>
@@ -374,7 +387,8 @@
                         <div class="actions">
                             <p>03.39</p>
                             <div class="icon">
-                                <i id="startPlayback" class="material-icons">play_arrow</i>
+                                <!-- <span id="play_music3" class="material-icons">play_arrow</span> -->
+                                <i id="3" class="material-icons">play_arrow</i>
 
                                 <!-- <i class='bx bxs-right-arrow'></i> -->
                             </div>
@@ -382,7 +396,7 @@
                         </div>
                     </div>
 
-                    <div class="item" id="song4">
+                    <div class="item" data-song-id="4">
                         <div class="info">
                             <p>04</p>
                             <img src="./images/music4.jpg" alt="">
@@ -394,7 +408,8 @@
                         <div class="actions">
                             <p>03.13</p>
                             <div class="icon">
-                                <i id="startPlayback" class="material-icons">play_arrow</i>
+                                <!-- <span id="play_music4" class="material-icons">play_arrow</span> -->
+                                <i id="4" class="material-icons">play_arrow</i>
 
                                 <!-- <i class='bx bxs-right-arrow'></i> -->
                             </div>
@@ -402,7 +417,7 @@
                         </div>
                     </div>
 
-                    <div class="item" id="song5">
+                    <div class="item" data-song-id="5">
                         <div class="info">
                             <p>05</p>
                             <img src="./images/music5.jpg" alt="">
@@ -414,14 +429,15 @@
                         <div class="actions">
                             <p>03.21</p>
                             <div class="icon">
-                                <i id="startPlayback" class="material-icons">play_arrow</i>
+                                <!-- <span id="play_music5" class="material-icons">play_arrow</span> -->
+                                <i id="5" class="material-icons">play_arrow</i>
                                 <!-- <i class='bx bxs-right-arrow'></i> -->
                             </div>
                             <i class='bx bxs-plus-square' ></i>
                         </div>
                     </div>
 
-                    <div class="item" id="song6">
+                    <div class="item" data-song-id="6">
                         <div class="info">
                             <p>06</p>
                             <img src="./images/music6.jpg" alt="">
@@ -433,7 +449,8 @@
                         <div class="actions">
                             <p>02.49</p>
                             <div class="icon">
-                                <i id="startPlayback" class="material-icons">play_arrow</i>
+                                <!-- <span id="play_music2" class="material-icons">play_arrow</span> -->
+                                <i id="6" class="material-icons">play_arrow</i>
                                 <!-- <i class='bx bxs-right-arrow'></i> -->
                             </div>
                             <i class='bx bxs-plus-square' ></i>

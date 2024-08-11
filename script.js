@@ -462,9 +462,9 @@ function startPlayback() {
     const topChartItems = document.querySelectorAll(".top-chart .item");
     
     topChartItems.forEach(item => {
-        const startBtn = item.querySelector(".actions #startPlayback");
-        if (startBtn) {
-            startBtn.addEventListener("click", () => {
+        const playBtn = item.querySelector(".actions .material-icons");
+        if (playBtn) {
+            playBtn.addEventListener("click", () => {
                 const songName = item.querySelector(".info h5").innerText;
                 const songArtist = item.querySelector(".info p").innerText;
 
@@ -475,11 +475,12 @@ function startPlayback() {
                     musicIndex = songIndex;
                     loadMusic(musicIndex);
                     playMusic();
-                    playingSong();
+                    updatePlayingSong();
                 }
             });
         }
     });
 }
 
-startPlayback(); // Initialize playback buttons
+startPlayback();
+
