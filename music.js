@@ -1,60 +1,63 @@
 
 const song = [
   {
-      id: 1,
-      songName: `Aasa Kooda <br>
-                  <div class="subtitle">Sai Abhyankkar</div>`,
-      poster: "images/music1.jpg",
+    id: 1,
+    songName: `What If I Say<br>
+                <div class="subtitle">Johnny Orlando, Mackenzie</div>`,
+    poster: "images/music1.jpg",
   },
 
   {
-      id: 2,
-      songName: `Akhiyaan Gulaab <br>
-                  <div class="subtitle">Mitraz</div>`,
-      poster: "images/music2.jpg",
+    id: 2,
+    songName: `Waste My Time <br>
+                <div class="subtitle">Johnny Orlando</div>`,
+    poster: "images/music2.jpg",
   },
 
   {
-      id: 3,
-      songName: `Water <br>
-                  <div class="subtitle">Tyla</div>`,
-      poster: "images/music3.jpg",
+    id: 3,
+    songName: `Sleep <br>
+                <div class="subtitle">Johnny Orlando</div>`,
+    poster: "images/music3.jpg",
   },
 
   {
-      id: 4,
-      songName: `Soni Soni <br>
-                  <div class="subtitle">Darshan Raval, Jonita Gandhi</div>`,
-      poster: "images/music4.jpg",
+    id: 4,
+    songName: `Last Summer <br>
+                <div class="subtitle">Johnny Orlando</div>`,
+    poster: "images/music4.jpeg",
   },
 
   {
-      id: 5,
-      songName: `Flowers <br>
-                  <div class="subtitle">Miley Cyrus</div>`,
-      poster: "images/music5.jpg",
+    id: 5,
+    songName: `See You <br>
+                <div class="subtitle">Johnny Orlando</div>`,
+    poster: "images/music5.jpg",
   },
 
   {
-      id: 6,
-      songName: `Nadaaniyan <br>
-                  <div class="subtitle">Akshath</div>`,
-      poster: `images/music6.jpg`,
+    id: 6,
+    songName: `Phobias <br>
+                <div class="subtitle">Johnny Orlando</div>`,
+    poster: "images/music6.jpg",
+  },
+
+  {
+    id: 7,
+    songName: `All These Parties <br>
+                <div class="subtitle">Johnny Orlando</div>`,
+    poster: "images/music7.jpeg",
   }
 ];
 
 const body = document.querySelector("body"),
   sidebar = body.querySelector(".sidebar"),
   toggle = body.querySelector(".toggle");
-// searchBtn = body.querySelector(".search-box");
 
 toggle.addEventListener("click", () => {
   sidebar.classList.toggle("close");
 });
 
-// searchBtn.addEventListener("click", () => {
-//   sidebar.classList.remove("close");
-// });
 
 document.querySelector('.notification-bell').addEventListener('click', function () {
   this.classList.add('ring');

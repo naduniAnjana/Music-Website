@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -133,16 +132,19 @@
                 </ul>
             </div>
 
-            <div class="contents">
-                <h1>In My Feelings</h1>
-                <div class="info">
-                    <h4>Camila Cabello</h4>     
-                    <h5>63 Million Plays</h5>
+            <div class="trending">
+                <div class="left">
+                    <div class="infom">
+                        <h2>Hawa Banke</h2>
+                        <h4>Darshan Raval</h4>
+                        <h5>239 Million Plays</h5>
+                        <div class="buttons">
+                            <button>Listen Now</button>
+                            <i class='bx bxs-heart'></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="buttons">
-                    <button class="btn1">Listen Now</button>
-                    <button class="btn2"><i class='bx bxs-heart'></i></button>
-                </div>
+                <img src="images/darshan.jpg" alt="darshan" width="350px" height="200px">
             </div>
 
             <div class="container-wrapper">
@@ -163,22 +165,21 @@
                     </div>
                 
                     <div class="progress-area">
-                        <div class="progress-bar">
+                        <div class="progress-bar" id="progressBar">
                             <audio src="" id="main-audio"></audio>
                         </div>
                         <div class="song-timer">
-                            <span class="current-time">0:00</span>
-                            <span class="max-duration">0:00</span>
+                            <span class="current-time" id="currentStart">0:00</span>
+                            <span class="max-duration" id="currentEnd">0:00</span>
                         </div>
                         <audio id="main-audio" src=""></audio>
                     </div>
                 
                     <div class="controls">
                         <i id="repeat-plist" class="material-icons" title="song looped">repeat_one</i>
-                        <!-- <i id="repeat" class="material-icons" title="Playlist looped">repeat</i> -->
                         <i id="prev" class="material-icons prev">fast_rewind</i>
                 
-                        <div class="play-pause">
+                        <div class="play-pause" id="masterPlay">
                             <i class="material-icons play">play_arrow</i>
                         </div>
                 
@@ -218,30 +219,31 @@
                         </div>
                         <p class="m2">Taylor Swift</p>
                     </li>
+
                     <li class="items">
                         <div class="img-play">
-                            <img src="./images/artist2.jpg" alt="img1">
+                            <img src="./images/artist2.jpg" alt="img2">
                             <i id="music2" class='bx bx-play-circle'></i>
                         </div>
                         <p class="m2">Ariana Grande</p>
                     </li>
                     <li class="items">
                         <div class="img-play">
-                            <img src="./images/artist3.jpeg" alt="img1">
+                            <img src="./images/artist3.jpeg" alt="img3">
                             <i id="music2" class='bx bx-play-circle'></i>
                         </div>
                         <p class="m2">Selena Gomez</p>
                     </li>
                     <li class="items">
                         <div class="img-play">
-                            <img src="./images/artist4.jpg" alt="img1">
+                            <img src="./images/artist4.jpg" alt="img4">
                             <i id="music2" class='bx bx-play-circle'></i>
                         </div>
                         <p class="m2">Beyonce</p>
                     </li>
                     <li class="items">
                         <div class="img-play">
-                            <img src="./images/artist5.jpg" alt="img1">
+                            <img src="./images/artist5.jpg" alt="img5">
                             <i id="music2" class='bx bx-play-circle'></i>
                         </div>
                         <p class="m2">Dua Lipa</p>
@@ -252,6 +254,13 @@
                             <i id="music2" class='bx bx-play-circle'></i>
                         </div>
                         <p class="m2">A R Rahman</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
+                            <a href="index.html"><img src="./images/artist18.jpg" alt="img1"></a>
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Johny Orlando</p>
                     </li>
                     <li class="items">
                         <div class="img-play">
@@ -297,6 +306,13 @@
                     </li>
                     <li class="items">
                         <div class="img-play">
+                            <a href="darshan.html"><img src="./images/artist17.jpg" alt="img1"></a>
+                            <i id="music2" class='bx bx-play-circle'></i>
+                        </div>
+                        <p class="m2">Darshan Raval</p>
+                    </li>
+                    <li class="items">
+                        <div class="img-play">
                             <img src="./images/artist13.jpg" alt="img1">
                             <i id="music2" class='bx bx-play-circle'></i>
                         </div>
@@ -329,133 +345,113 @@
             <div class="top-chart">
                 <div class="header1">
                     <h5>Top Charts</h5>
-                    <!-- <a href="#" class="see">See all</a> -->
                 </div>
 
-                <div class="items">
-                    <div class="item" data-song-id="1">
-                        <div class="info">
-                            <p>01</p>
-                            <img src="./images/music1.jpg" alt="song image">
-                            <div class="details">
-                                <h5>Aasa Kooda</h5>
-                                <p>Sai Abhyankkar</p>
-                            </div>
-                        </div>
+                <div class="menu_song">
+                    <li class="songItem">
+                        <span>01</span>
+                        <img src="images/music1.jpg" alt="kooda">
+                        <h5>Aasa Kooda <br>
+                            <div class="subtitle">Sai Abhyankkar</div>
+                        </h5>
                         <div class="actions">
-                            <p>03.48</p>
+                            <p>02.59</p>
                             <div class="icon">
-                                <!-- <span id="play_music1" class="material-icons">play_arrow</span> -->
-                                <i id="1" class="material-icons">play_arrow</i>
-
-                                <!-- <i class='bx bxs-right-arrow'></i> -->
+                                <i id="1" class="material-icons playListPlay">play_arrow</i>
                             </div>
                             <i class='bx bxs-plus-square' ></i>
                         </div>
-                    </div>
-
-                    <div class="item" data-song-id="2">
-                        <div class="info">
-                            <p>02</p>
-                            <img src="./images/music2.jpg" alt="song image">
-                            <div class="details">
-                                <h5>Akhiyaan Gulaab</h5>
-                                <p>Mitraz</p>
-                            </div>
-                        </div>
+                    </li>
+        
+                    <li class="songItem">
+                        <span>02</span>
+                        <img src="images/music2.jpg" alt="">
+                        <h5>Aasa Kooda<br>
+                            <div class="subtitle">Sai Abhyankkar</div>
+                        </h5>
                         <div class="actions">
-                            <p>02.35</p>
+                            <p>03.00</p>
                             <div class="icon">
-                                <!-- <span id="play_music2" class="material-icons">play_arrow</span> -->
-                                <i id="2" class="material-icons">play_arrow</i>
-
-                                <!-- <i class='bx bxs-right-arrow'></i> -->
+                                <i id="2" class="material-icons playListPlay">play_arrow</i>
                             </div>
                             <i class='bx bxs-plus-square' ></i>
                         </div>
-                    </div>
-
-                    <div class="item" data-song-id="3">
-                        <div class="info">
-                            <p>03</p>
-                            <img src="./images/music3.jpg" alt="song image">
-                            <div class="details">
-                                <h5>Water</h5>
-                                <p>Tyla</p>
-                            </div>
-                        </div>
-                        <div class="actions">
-                            <p>03.39</p>
-                            <div class="icon">
-                                <!-- <span id="play_music3" class="material-icons">play_arrow</span> -->
-                                <i id="3" class="material-icons">play_arrow</i>
-
-                                <!-- <i class='bx bxs-right-arrow'></i> -->
-                            </div>
-                            <i class='bx bxs-plus-square' ></i>
-                        </div>
-                    </div>
-
-                    <div class="item" data-song-id="4">
-                        <div class="info">
-                            <p>04</p>
-                            <img src="./images/music4.jpg" alt="">
-                            <div class="details">
-                                <h5>Soni Soni</h5>
-                                <p>Darshan Raval, Jonita Gandhi</p>
-                            </div>
-                        </div>
+                    </li>
+        
+                    <li class="songItem">
+                        <span>03</span>
+                        <img src="images/music3.jpg" alt="">  
+                        <h5>Aasa Kooda <br>
+                            <div class="subtitle">Sai Abhyankkar</div>
+                        </h5>
                         <div class="actions">
                             <p>03.13</p>
                             <div class="icon">
-                                <!-- <span id="play_music4" class="material-icons">play_arrow</span> -->
-                                <i id="4" class="material-icons">play_arrow</i>
-
-                                <!-- <i class='bx bxs-right-arrow'></i> -->
+                                <i id="3" class="material-icons playListPlay">play_arrow</i>
                             </div>
                             <i class='bx bxs-plus-square' ></i>
                         </div>
-                    </div>
-
-                    <div class="item" data-song-id="5">
-                        <div class="info">
-                            <p>05</p>
-                            <img src="./images/music5.jpg" alt="">
-                            <div class="details">
-                                <h5>Flowers</h5>
-                                <p>Miley Cyrus</p>
-                            </div>
-                        </div>
+                    </li>
+        
+                    <li class="songItem">
+                        <span>04</span>
+                        <img src="images/music4.jpg" alt="">
+                        <h5>Aasa Kooda <br>
+                            <div class="subtitle">Sai Abhyankkar</div>
+                        </h5>
                         <div class="actions">
-                            <p>03.21</p>
+                            <p>03.37</p>
                             <div class="icon">
-                                <!-- <span id="play_music5" class="material-icons">play_arrow</span> -->
-                                <i id="5" class="material-icons">play_arrow</i>
-                                <!-- <i class='bx bxs-right-arrow'></i> -->
+                                <i id="4" class="material-icons playListPlay">play_arrow</i>
                             </div>
                             <i class='bx bxs-plus-square' ></i>
                         </div>
-                    </div>
-
-                    <div class="item" data-song-id="6">
-                        <div class="info">
-                            <p>06</p>
-                            <img src="./images/music6.jpg" alt="">
-                            <div class="details">
-                                <h5>Nadaaniyan</h5>
-                                <p>Akshath</p>
-                            </div>
-                        </div>
+                    </li>
+        
+                    <li class="songItem">
+                        <span>05</span>
+                        <img src="images/music5.jpg" alt="">
+                        <h5>Aasa Kooda <br>
+                            <div class="subtitle">Sai Abhyankkar</div>
+                        </h5>
                         <div class="actions">
-                            <p>02.49</p>
+                            <p>03.00</p>
                             <div class="icon">
-                                <!-- <span id="play_music2" class="material-icons">play_arrow</span> -->
-                                <i id="6" class="material-icons">play_arrow</i>
-                                <!-- <i class='bx bxs-right-arrow'></i> -->
+                                <i id="5" class="material-icons playListPlay">play_arrow</i>
                             </div>
                             <i class='bx bxs-plus-square' ></i>
                         </div>
-                    </div>
+                    </li>
+        
+                    <li class="songItem">
+                        <span>06</span>
+                        <img src="images/music6.jpg" alt="">
+                        <h5>Aasa Kooda <br>
+                            <div class="subtitle">Sai Abhyankkar</div>
+                        </h5>
+                        <div class="actions">
+                            <p>03.01</p>
+                            <div class="icon">
+                                <i id="6" class="material-icons playListPlay">play_arrow</i>
+                            </div>
+                            <i class='bx bxs-plus-square' ></i>
+                        </div>
+                    </li>
+
+                    <li class="songItem">
+                        <span>07</span>
+                        <img src="images/music7.jpg" alt="">
+                        <h5>Aasa Kooda <br>
+                            <div class="subtitle">Sai Abhyankkar</div>
+                        </h5>
+                        <div class="actions">
+                            <p>03.01</p>
+                            <div class="icon">
+                                <i id="7" class="material-icons playListPlay">play_arrow</i>
+                            </div>
+                            <i class='bx bxs-plus-square' ></i>
+                        </div>
+                    </li>
                 </div>
             </div>
 
@@ -495,12 +491,11 @@
 
         </section>
 
-        <script src="music.js"></script>
+        <script src="darshanR.js"></script>
         <script src="music-list.js"></script>
-        <script src="script.js"></script>
         <script src="artist.js"></script>
 
         <script src="categories.js"></script>
-        <script src="chart.js"></script>
+        <script src="darshan.js"></script>
     </body>
 </html>

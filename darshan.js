@@ -1,52 +1,52 @@
 
-const sing = [
+const darshan = [
     {
         id: 1,
-        songName: `What If I Say<br>
-                    <div class="subtitle">Johnny Orlando, Mackenzie</div>`,
-        poster: "images/music1.jpg",
+        songName: `Jeeja <br>
+                    <div class="subtitle">Darshan Raval</div>`,
+        poster: "images/darshan/music1.jpg",
     },
 
     {
         id: 2,
-        songName: `Waste My Time <br>
-                    <div class="subtitle">Johnny Orlando</div>`,
-        poster: "images/music2.jpg",
+        songName: `Tu Hai <br>
+                    <div class="subtitle">Darshan Raval, Prakriti Giri</div>`,
+        poster: "images/darshan/music2.jpg",
     },
 
     {
         id: 3,
-        songName: `Sleep <br>
-                    <div class="subtitle">Johnny Orlando</div>`,
-        poster: "images/music3.jpg",
+        songName: `Soni Soni <br>
+                    <div class="subtitle">Darshan Raval, Jonita Gandhi</div>`,
+        poster: "images/darshan/music3.jpg",
     },
 
     {
         id: 4,
-        songName: `Last Summer <br>
-                    <div class="subtitle">Johnny Orlando</div>`,
-        poster: "images/music4.jpeg",
+        songName: `Tera Zikr <br>
+                    <div class="subtitle">Darshan Raval</div>`,
+        poster: "images/darshan/music4.jpg",
     },
 
     {
         id: 5,
-        songName: `See You <br>
-                    <div class="subtitle">Johnny Orlando</div>`,
-        poster: "images/music5.jpg",
+        songName: `Hawa Banke <br>
+                    <div class="subtitle">Darshan Raval</div>`,
+        poster: "images/darshan/music5.jpg",
     },
 
     {
         id: 6,
-        songName: `Phobias <br>
-                    <div class="subtitle">Johnny Orlando</div>`,
-        poster: "images/music6.jpg",
+        songName: `Do Din <br>
+                    <div class="subtitle">Darshan Raval</div>`,
+        poster: `images/darshan/music6.jpg`,
     },
 
     {
         id: 7,
-        songName: `All These Parties <br>
-                    <div class="subtitle">Johnny Orlando</div>`,
-        poster: "images/music7.jpeg",
+        songName: `Mahiye Jinna Sohna <br>
+                    <div class="subtitle">Darshan Raval </div>`,
+        poster: `images/darshan/music7.jpg`,
     }
 ];
 
@@ -78,13 +78,13 @@ Array.from(document.getElementsByClassName('songItem')).forEach((e, i) => {
     const h5 = e.getElementsByTagName('h5')[0];
 
     if (img) {
-        img.src = sing[i].poster;
+        img.src = darshan[i].poster;
     } else {
         console.error('Image element not found');
     }
     
     if (h5) {
-        h5.innerHTML = sing[i].songName;
+        h5.innerHTML = darshan[i].songName;
     } else {
         console.error('h5 element not found');
     }
@@ -113,10 +113,10 @@ Array.from(document.getElementsByClassName('playListPlay')).forEach((e) => {
         index = el.target.id;
 
         // Update the audio source and poster image
-        music.src = `songs/${index}.mp3`;
+        music.src = `songs/darshan/${index}.mp3`;
         
         if (poster_master_play) {
-            poster_master_play.src = `images/${index}.jpg`; // Adjust image path if needed
+            poster_master_play.src = `images/darshan/${index}.jpg`; // Adjust image path if needed
         } else {
             console.error('Poster image element not found');
         }
@@ -125,7 +125,7 @@ Array.from(document.getElementsByClassName('playListPlay')).forEach((e) => {
         playMusic();
 
         // Update song details
-        let songTitles = sing.filter((els) => els.id == index);
+        let songTitles = darshan.filter((els) => els.id == index);
         songTitles.forEach(elss => {
             let { songName } = elss;
             title.innerHTML = songName;
@@ -157,7 +157,7 @@ let musicIndex = 1;
 
 function nextMusic() {
     musicIndex++;
-    if (musicIndex > sing.length) {
+    if (musicIndex > darshan.length) {
         musicIndex = 1; // Wrap around to the first song
     }
     loadMusic(musicIndex);
@@ -168,7 +168,7 @@ function nextMusic() {
 function prevMusic() {
     musicIndex--;
     if (musicIndex < 1) {
-        musicIndex = sing.length; // Wrap around to the last song
+        musicIndex = darshan.length; // Wrap around to the last song
     }
     loadMusic(musicIndex);
     playMusic();
@@ -177,13 +177,13 @@ function prevMusic() {
 
 function loadMusic(index) {
     // Ensure music and poster are updated correctly
-    music.src = `songs/${index}.mp3`;
+    music.src = `songs/darshan/${index}.mp3`;
     if (poster_master_play) {
-        poster_master_play.src = `images/${index}.jpg`;
+        poster_master_play.src = `images/darshan/${index}.jpg`;
     }
 
     // Update song details
-    let songTitles = sing.filter((els) => els.id == index);
+    let songTitles = darshan.filter((els) => els.id == index);
     songTitles.forEach(elss => {
         let { songName } = elss;
         title.innerHTML = songName;
@@ -288,9 +288,9 @@ music.addEventListener("ended", () => {
             playMusic();
             break;
         case "shuffle":
-            let randIndex = Math.floor((Math.random() * sing.length) * 1);
+            let randIndex = Math.floor((Math.random() * ariana.length) * 1);
             do {
-                randIndex = Math.floor((Math.random() * sing.length) * 1);
+                randIndex = Math.floor((Math.random() * ariana.length) * 1);
             } while (musicIndex == randIndex);
             musicIndex = randIndex;
             loadMusic(musicIndex);
@@ -299,6 +299,7 @@ music.addEventListener("ended", () => {
             break;
     }
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // Load the first song's details

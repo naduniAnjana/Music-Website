@@ -81,14 +81,12 @@ body {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 15px;
-}
-
-.song-details p {
     color: #fff;
+    font-size: 14px;
 }
 
 .song-details .name {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .song-details .artist {
